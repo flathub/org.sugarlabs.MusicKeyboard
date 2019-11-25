@@ -1,0 +1,46 @@
+diff --git a/activity.py b/activity.py
+index 166025a..6272c94 100644
+--- a/activity.py
++++ b/activity.py
+@@ -68,6 +68,7 @@ from RythmGenerator import generator
+ 
+ from draw_piano import PianoKeyboard, LETTERS_TO_KEY_CODES
+ 
++from sugarapp.helpers import PrimaryMonitor
+ from sugarapp.widgets import SugarCompatibleActivity
+ from sugarapp.widgets import ExtendedActivityToolbarButton
+ from sugarapp.widgets import DesktopSaveChooser
+@@ -404,8 +405,8 @@ def set_palette_list(instrument_list):
+     menuitem_width = req2.width
+     menuitem_height = req2.height
+ 
+-    palette_width = Gdk.Screen.width() - style.GRID_CELL_SIZE * 3
+-    palette_height = Gdk.Screen.height() - style.GRID_CELL_SIZE * 3
++    palette_width = PrimaryMonitor.width() - style.GRID_CELL_SIZE * 3
++    palette_height = PrimaryMonitor.height() - style.GRID_CELL_SIZE * 3
+ 
+     nx = min(int(palette_width / menuitem_width), MAX_PALETTE_WIDTH)
+     ny = min(int(palette_height / menuitem_height), len(instrument_list) + 1)
+@@ -648,9 +649,9 @@ class SimplePianoActivity(SugarCompatibleActivity):
+         vbox.pack_end(self.piano, True, True, 0)
+         vbox.show_all()
+         self.set_canvas(vbox)
+-        piano_height = Gdk.Screen.width() / 2
++        piano_height = PrimaryMonitor.width() / 2
+         self._event_box.set_size_request(
+-            -1, Gdk.Screen.height() - piano_height - style.GRID_CELL_SIZE)
++            -1, PrimaryMonitor.height() - piano_height - style.GRID_CELL_SIZE)
+         self.connect('size-allocate', self.__allocate_cb)
+ 
+         # TODO: disabe until is implemented with csnd6
+@@ -757,7 +758,7 @@ class SimplePianoActivity(SugarCompatibleActivity):
+         logging.debug('activity.py resize......')
+         piano_height = width / 2
+         self._event_box.set_size_request(
+-            -1, Gdk.Screen.height() - piano_height - style.GRID_CELL_SIZE)
++            -1, PrimaryMonitor.height() - piano_height - style.GRID_CELL_SIZE)
+         return False
+ 
+     def load_instruments(self):
+
+

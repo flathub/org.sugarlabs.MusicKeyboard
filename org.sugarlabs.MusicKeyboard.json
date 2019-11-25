@@ -221,8 +221,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/tchx84/sugarapp.git",
-                    "tag": "v1.3",
-                    "commit": "7b12c98ff63fe1dc526a6a0bc7cc15a003915fe3"
+                    "tag": "v1.5",
+                    "commit": "ea6ee3cb3c1289d4112cf5fc6c4db0ab5cd9d8d6"
                 }
             ]
         },
@@ -293,6 +293,10 @@
                 {
                     "type": "patch",
                     "path": "musickeyboard-port.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "musickeyboard-monitors.patch"
                 },
                 {
                     "type": "patch",
