@@ -1,13 +1,8 @@
 diff --git a/activity/activity.info b/activity/activity.info
-index 1b0e63c..6ad7387 100644
+index 27a22db..f0035a1 100644
 --- a/activity/activity.info
 +++ b/activity/activity.info
-@@ -1,12 +1,19 @@
- [Activity]
- name = Music Keyboard
--activity_version = 12
-+activity_version = 12.1
- bundle_id = org.sugarlabs.MusicKeyboard
+@@ -5,8 +5,15 @@ bundle_id = org.sugarlabs.MusicKeyboard
  exec = sugar-activity3 activity.SimplePianoActivity
  icon = activity-simplepiano
  license = GPLv2+
