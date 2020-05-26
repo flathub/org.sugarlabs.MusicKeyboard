@@ -84,7 +84,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/godiard/music-keyboard-activity.git",
-                    "commit": "c853eb2374b07d3dff77186c847a3d9fbaf337ac"
+                    "tag": "v13",
+                    "commit": "f26eb80e15cbe3c29dc1342a4fec7734cb56553d"
                 },
                 {
                     "type": "patch",
