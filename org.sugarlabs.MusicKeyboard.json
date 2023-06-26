@@ -80,20 +80,6 @@
             ]
         },
         {
-            "name": "ctcsound",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-index --find-links \"file://${PWD}\" --prefix=${FLATPAK_DEST} ctcsound"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/bf/8b76843066b189776356675716db4ec3a624c0a9dcd651f263adf527090d/ctcsound-6.13.tar.gz",
-                    "sha256": "69a8e1c44ed8323a8217703bfc44d6b3163ab52633d8d69572b4910a3c7eab47"
-                }
-            ]
-        },
-        {
             "name": "musickeyboard",
             "buildsystem": "simple",
             "build-commands": [
