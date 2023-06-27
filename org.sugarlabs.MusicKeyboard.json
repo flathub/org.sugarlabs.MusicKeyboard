@@ -1,9 +1,9 @@
 {
     "app-id": "org.sugarlabs.MusicKeyboard",
     "base": "org.sugarlabs.BaseApp",
-    "base-version": "22.06",
+    "base-version": "23.06",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "separate-locales": false,
     "command": "sugarapp",
@@ -32,8 +32,12 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://github.com/numpy/numpy/releases/download/v1.22.4/numpy-1.22.4.zip",
-                    "sha256": "425b390e4619f58d8526b3dcf656dde069133ae5c240229821f01b5f44ea07af"
+                    "url": "https://files.pythonhosted.org/packages/d0/b2/fe774844d1857804cc884bba67bec38f649c99d0dc1ee7cbbf1da601357c/numpy-1.25.0.tar.gz",
+                    "sha256": "f1accae9a28dc3cda46a91de86acf69de0d1b5f4edd44a9b0c3ceb8036dfff19",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "numpy"
+                    }
                 }
             ],
             "cleanup": [
@@ -48,6 +52,10 @@
             "name": "csound",
             "buildsystem": "cmake",
             "build-options": {
+                "env": {
+                    "PYTHONHOME": "/app",
+                    "PYTHONPATH": "/usr/lib/python3.10"
+                },
                 "arch": {
                     "arm": {
                         "config-opts": [
@@ -62,22 +70,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/csound/csound.git",
-                    "tag": "6.15.0",
-                    "commit": "18c2c7897425f462b9a7743cee157cb410c88198"
-                }
-            ]
-        },
-        {
-            "name": "ctcsound",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-index --find-links \"file://${PWD}\" --prefix=${FLATPAK_DEST} ctcsound"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/bf/8b76843066b189776356675716db4ec3a624c0a9dcd651f263adf527090d/ctcsound-6.13.tar.gz",
-                    "sha256": "69a8e1c44ed8323a8217703bfc44d6b3163ab52633d8d69572b4910a3c7eab47"
+                    "tag": "6.18.1",
+                    "commit": "a1580f9cdf331c35dceb486f4231871ce0b00266",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
                 }
             ]
         },
@@ -92,7 +90,11 @@
                     "type": "git",
                     "url": "https://github.com/godiard/music-keyboard-activity.git",
                     "tag": "v13",
-                    "commit": "f26eb80e15cbe3c29dc1342a4fec7734cb56553d"
+                    "commit": "f26eb80e15cbe3c29dc1342a4fec7734cb56553d",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 },
                 {
                     "type": "patch",
