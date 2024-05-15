@@ -2,7 +2,7 @@ diff --git a/activity/activity.info b/activity/activity.info
 index 27a22db..f0035a1 100644
 --- a/activity/activity.info
 +++ b/activity/activity.info
-@@ -5,8 +5,15 @@ bundle_id = org.sugarlabs.MusicKeyboard
+@@ -5,8 +5,16 @@ bundle_id = org.sugarlabs.MusicKeyboard
  exec = sugar-activity3 activity.SimplePianoActivity
  icon = activity-simplepiano
  license = GPLv2+
@@ -20,3 +20,4 @@ index 27a22db..f0035a1 100644
 +screenshots = https://raw.githubusercontent.com/godiard/music-keyboard-activity/master/screenshots/en/1.png
 +url = https://help.sugarlabs.org/en/musickeyboard.html
 +developer_name = Sugar Labs Community
++developer_id = org.sugarlabs
