@@ -11,7 +11,7 @@ git clone https://github.com/flathub/org.sugarlabs.MusicKeyboard
 cd org.sugarlabs.MusicKeyboard
 flatpak -y --user install flathub org.gnome.{Platform,Sdk}//46
 flatpak -y --user install org.sugarlabs.BaseApp//24.04
-flatpak-builder --user --force-clean --install build org.sugarlabs.MusicKeyboard.json
+flatpak-builder --user --force-clean --install --disable-rofiles-fuse build org.sugarlabs.MusicKeyboard.json
 ```
 
 ## Check For Updates
