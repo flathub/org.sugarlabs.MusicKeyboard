@@ -23,6 +23,9 @@
         "/share/info",
         "/share/man"
     ],
+    "cleanup-commands": [
+        "rm -rf /app/share/gir-1.0"
+    ],    
     "modules": [
         "numpy.json",
         {
